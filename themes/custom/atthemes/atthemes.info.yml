@@ -1,0 +1,18 @@
+name: "AT custom Themes"
+type: theme
+description: "Custom Themes made by AT"
+core_version_requirement: ^8 || ^9 || ^10
+# base theme: starterkit_theme
+base theme: claro
+screenshot: drupal_site_SS_DC.png
+regions:
+  header: Header
+  atmenu: Navigation
+  content: Content
+  footer: Footer
+  page_top: Page top
+  page_bottom: Page bottom
+libraries:
+  - atthemes/bootstrap
+  - atthemes/pacifico
+  - atthemes/global-css

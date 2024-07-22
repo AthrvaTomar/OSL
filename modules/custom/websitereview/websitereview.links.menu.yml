@@ -1,0 +1,13 @@
+websitereview.form:
+  title: website review form
+  description: Link to website review form
+  route_name: websitereview.form
+  weight: 10
+  menu_name: admin
+
+websitereview.controllerform:
+  title: website review form using controller
+  description: Link to website review form using controller
+  route_name: websitereview.controllerform
+  weight: 10
+  menu_name: admin

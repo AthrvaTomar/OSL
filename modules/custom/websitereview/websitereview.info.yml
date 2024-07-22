@@ -1,0 +1,12 @@
+name: 'Website Review'
+type: module
+core_version_requirement: ^10
+description: 'Allows users to give review'
+package: 'Website Review'
+
+dependencies:
+  - drupal:block
+  - drupal:user
+  - drupal:node
+  
+configure: websitereview.admin_settings

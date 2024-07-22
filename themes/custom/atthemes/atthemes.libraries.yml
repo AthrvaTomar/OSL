@@ -1,0 +1,24 @@
+bootstrap:
+  css:
+    theme:
+      css/bootstrap.min.css: {}
+
+  js:
+    js/bootstrap.min.js: {}
+
+pacifico:
+  license:
+    name: 'SIL Open Font License 1.1'
+    url: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+  css:
+    theme:
+      //fonts.googleapis.com/css2?family=Pacifico: { type: external }
+      css/styles.css: {}
+
+global-css:
+  css:
+    theme:
+      css/elements.css: {}
+      css/global.css: {}
+      css/layout.css: {}
+      css/print.css: { media: print }

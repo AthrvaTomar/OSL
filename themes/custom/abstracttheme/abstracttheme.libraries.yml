@@ -1,0 +1,16 @@
+abstract:
+  css:
+    theme:
+      css/base.css: {}
+      css/fonts.css: {}
+      css/main.css: {}
+      css/vendor.css: {}
+      css/custom.css: {}
+
+  js:
+    js/jquery-2.1.3.min.js: {}
+    js/main.js: {}
+    js/modernizr.js: {}
+    js/pace.js: {}
+    js/plugins.js: {}
+    

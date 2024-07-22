@@ -1,0 +1,5 @@
+name: 'my first custom module'
+type: module
+core_version_requirement: ^10
+description: 'first module by me'
+package: 'acquia module devlopment'

@@ -1,0 +1,39 @@
+websitereview.form:
+  path: '/websitereview'
+  defaults:
+    _form: '\Drupal\websitereview\Form\WebsitereviewForm'
+    _title: 'Review to this Website'
+  requirements:
+    _permission: 'access content'
+
+websitereview.controllerform:
+  path: '/reviewformusingcontroller'
+  defaults:
+    _controller: '\Drupal\websitereview\Controller\ReviewFormUsingController::content'
+    _title: 'Review of this Website using controllers'
+  requirements:
+    _permission: 'access content'
+
+websitereview.getnodes:
+  path: '/getreviewnodes'
+  defaults:
+    _controller: '\Drupal\websitereview\Controller\ReviewFormUsingController::getNodes'
+    _title: 'Review of this Website using Get Nodes'
+  methods: [GET]
+  requirements:
+      # _role: 'administrator'
+      _permission: 'access content'
+  options:
+    _auth: ['basic_auth']
+
+websitereview.postnodes:
+  path: '/postreviewnodes'
+  defaults:
+    _controller: '\Drupal\websitereview\Controller\ReviewFormUsingController::postNodes'
+    _title: 'Review of this Website using Post Nodes'
+  requirements:
+    _permission: 'access content'
+    # _role: 'administrator'
+  methods: [POST]
+  options:
+    _auth: ['basic_auth']

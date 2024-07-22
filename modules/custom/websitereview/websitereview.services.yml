@@ -1,0 +1,4 @@
+services:
+  websitereview.custom_services:
+    class: Drupal\websitereview\Services\CustomServices
+    arguments: ['@database']

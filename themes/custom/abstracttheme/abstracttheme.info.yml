@@ -1,0 +1,21 @@
+name: "task abstract Themes"
+type: theme
+description: "Custom Themes for task"
+core_version_requirement: ^8 || ^9 || ^10
+base theme: bootstrap5
+screenshot: theme_ss.png
+logo: logo.svg
+
+regions:
+  header: Header
+  nav_branding: 'Navigation branding region'
+  nav_main: 'Main navigation region'
+  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  breadcrumb: 'Breadcrumbs'
+  slider: 'Slider'
+  content: 'Main content'
+  content_second: 'Main content second'
+  footer: 'Footer'
+
+libraries:
+  - abstracttheme/abstract
