@@ -32,6 +32,7 @@
 #}
 {%
   set classes = [
+    'flexslider',
     'view',
     'view-' ~ id|clean_class,
     'view-id-' ~ id,
@@ -39,7 +40,7 @@
     dom_id ? 'js-view-dom-id-' ~ dom_id,
   ]
 %}
-<div{{ attributes.addClass(classes) }}>
+<div{{ attributes.addClass(classes) }} id="featured-post-slider">
   {{ title_prefix }}
   {% if title %}
     {{ title }}
@@ -62,8 +63,12 @@
   {% endif %}
 
   {% if rows %}
-    <div class="view-content">
+    <div class="view-content slides">
       {{ rows }}
+    </div>
+  {% elseif empty %}
+    <div class="view-empty">
+      {{ empty }}
     </div>
   {% endif %}
 

@@ -15,6 +15,7 @@ regions:
   slider: 'Slider'
   content: 'Main content'
   content_second: 'Main content second'
+  content_third: 'Main content third'
   footer: 'Footer'
 
 libraries:

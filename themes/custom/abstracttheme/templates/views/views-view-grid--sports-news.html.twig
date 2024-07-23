@@ -43,6 +43,8 @@
 {% if options.col_class_default %}
   {%
     set col_classes = [
+      'darktheme',
+      'entry-text',
       'views-col',
       options.alignment == 'vertical' ? 'clearfix',
     ]
@@ -56,7 +58,7 @@
     {% for row in items %}
       <div{{ row.attributes.addClass(row_classes, options.row_class_default ? 'row-' ~ loop.index) }}>
         {% for column in row.content %}
-          <div{{ column.attributes.addClass(col_classes, options.col_class_default ? 'col-' ~ loop.index) }}>
+          <div{{ column.attributes.addClass(col_classes, options.col_class_default ? 'col-' ~ loop.index) }} style="background-color: black !important;">
             {{- column.content -}}
           </div>
         {% endfor %}
@@ -74,3 +76,11 @@
     {% endfor %}
   {% endif %}
 </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll('.darktheme');
+    elements.forEach(element => {
+      element.style.backgroundColor = 'black';
+    });
+  });
+</script>

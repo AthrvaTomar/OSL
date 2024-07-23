@@ -42,29 +42,16 @@
  * @see html.html.twig
  */
 #}
-{%
-set nav_classes = 'navbar navbar-expand-lg' ~
-  (b5_navbar_schema != 'none' ? " navbar-#{b5_navbar_schema}" : ' ') ~
-  (b5_navbar_schema != 'none' ? (b5_navbar_schema == 'dark' ? ' text-light' : ' text-dark' ) : ' ') ~
-  (b5_navbar_bg_schema != 'none' ? " bg-#{b5_navbar_bg_schema}" : ' ')
-%}
 
 {%
-set footer_classes = ' ' ~
-  (b5_footer_schema != 'none' ? " footer-#{b5_footer_schema}" : ' ') ~
-  (b5_footer_schema != 'none' ? (b5_footer_schema == 'dark' ? ' text-light' : ' text-dark' ) : ' ') ~
-  (b5_footer_bg_schema != 'none' ? " bg-#{b5_footer_bg_schema}" : ' ')
-%}
-
-{%
-set nav_classes = 'navbar navbar-expand-lg navbar-dark bg-dark text-light'
+set nav_classes = 'navbar navbar-expand-lg short-header'
 %}
 
 {%
 set footer_classes = 'footer-dark bg-dark text-light'
 %}
 
-<header role="banner">
+<header role="banner" header>
   {{ page.header }}
 
   {% if page.nav_branding or page.nav_main or page.nav_additional %}
@@ -116,33 +103,16 @@ set footer_classes = 'footer-dark bg-dark text-light'
           {{ page.slider }}
         </div>
       {% endif %}
-      <div class="order-1 order-lg-2 {{ content_classes }} col-md-6">
+      <div class="order-1 order-lg-2 {{ content_classes }} col-md-6 bricks-wrapper">
         {{ page.content }}
       </div>
     </div>
-    <div class="row g-0">
-      <div class="order-1 order-lg-2 {{ content_classes }}">
+    <div class="row g-0 row masonary">
+      <div class="order-1 order-lg-2 {{ content_classes }} bricks-wrapper">
         {{ page.content_second }}
       </div>
     </div>
   </div>
-  <div class="row">
-   		
-   		<nav class="pagination">
-		      <span class="page-numbers prev inactive">Prev</span>
-		   	<span class="page-numbers current">1</span>
-		   	<a href="#" class="page-numbers">2</a>
-		      <a href="#" class="page-numbers">3</a>
-		      <a href="#" class="page-numbers">4</a>
-		      <a href="#" class="page-numbers">5</a>
-		      <a href="#" class="page-numbers">6</a>
-		      <a href="#" class="page-numbers">7</a>
-		      <a href="#" class="page-numbers">8</a>
-		      <a href="#" class="page-numbers">9</a>
-		   	<a href="#" class="page-numbers next">Next</a>
-	      </nav>
-
-   	</div>
 
 
 </main>

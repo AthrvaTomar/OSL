@@ -69,6 +69,10 @@
 #}
 {%
   set classes = [
+    'entry',
+    'format-standard',
+    'animate-this',
+    'animated fadeInUp',
     'node',
     'node--type-' ~ node.bundle|clean_class,
     node.isPromoted() ? 'node--promoted',
@@ -80,14 +84,6 @@
 {{ attach_library('bootstrap5/node') }}
 <article{{ attributes.addClass(classes) }}>
 
-  {{ title_prefix }}
-  {% if label and not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
-
   {% if display_submitted %}
     <footer class="node__meta">
       {{ author_picture }}
@@ -98,7 +94,14 @@
     </footer>
   {% endif %}
 
+  
+
   <div{{ content_attributes.addClass('node__content') }}>
+      {% if label and not page %}
+        <h2{{ title_attributes }} class = "entry-title entry-text">
+          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        </h2>
+      {% endif %}
     {{ content }}
   </div>
 

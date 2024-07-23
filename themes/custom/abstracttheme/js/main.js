@@ -230,7 +230,7 @@
 		      touch: true,		
 		   });
 
-		   $('.post-slider').flexslider({
+		   $('.slider').flexslider({
 		   	namespace: "flex-",
 		      controlsContainer: "",
 		      animation: 'fade',

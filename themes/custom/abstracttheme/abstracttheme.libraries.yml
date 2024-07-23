@@ -1,6 +1,10 @@
 abstract:
   css:
     theme:
+      # 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css': {type: external}
+      # 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css': {type: external}
+      'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css': {type: external}
+      'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css': {type: external}
       css/base.css: {}
       css/fonts.css: {}
       css/main.css: {}
@@ -13,4 +17,6 @@ abstract:
     js/modernizr.js: {}
     js/pace.js: {}
     js/plugins.js: {}
-    
+    js/custom.js: {}
+    'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js': {type: external}
+    'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js': {type: external}
